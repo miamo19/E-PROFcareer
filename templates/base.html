@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>E-Prof</title>
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" />
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,600,700&display=swap" rel="stylesheet" />
+  <!-- Custom styles for this template -->
+  <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="{% static 'css/responsive.css' %}" rel="stylesheet" />
+  
+  <style>
+    /*header section*/
+
+  .stud{
+
+  height: 12vh;
+  background-color: #b5caee;
+  background-image: url("{% static 'images/hero-bg.jpg' %}");
+  background-size: cover;
+
+  }
+  
+  .miamo{
+  height: 60vh;
+  background-color: #b5caee;
+  background-image: url("{% static 'images/hero-bg.jpg' %}");
+  background-size: cover;
+  }
+  
+  </style>
+  
+  
+</head>
+
+<body>
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container stud">
+          <a class="navbar-brand" href="index.html">
+            <h3>
+              E-Prof
+            </h3>
+            <span>Career</span>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
+          aria-controls="navbarSutegory:formatters django-htmlpportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span onclick="clickbut()" id="but-tog" class="navbar-toggler-icon"></span>
+          </button>
+          
+          <script>
+            function myFunction() {
+               var element = document.getElementById("but-tog");
+               element.classList.toggle("text-danger");
+            }
+            </script>
+
+          <div class="collapse navbar-collapse ml-auto" id="navbarSupportedContent">
+            <ul class="navbar-nav  ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'about' %}"> About </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'course' %}"> Courses </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'event' %}"> Events </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'contact' %}">Contact us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'login' %}">Login</a>
+              </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
+              <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
+            </form>
+          </div>
+        </nav>
+      </div>
+    </header>
+<!-- end hearder section -->
+
+
+{% block content %}{% endblock %}
+
+
+
+
+  <!-- info section -->
+  <section class="info_section layout_padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="info_menu">
+            <h5>
+              QUICK LINKS
+            </h5>
+            <ul class="navbar-nav  ">
+              <li class="nav-item active">
+                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html"> About </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="course.html"> Courses </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="event.html"> Events </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="login.html">Login</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="info_course">
+            <h5>
+              TOP RATED SCHOOLS
+            </h5>
+            <p>
+              POLYTECHNIC, IUT, CUSS, <br>
+              Higher Education imparts in-depth knowledge and understanding so as to advance the students to new frontiers of knowledge.
+              Higher Education also provides opportunitues of lifelong learning, allowing people to upgrade their knowledge and skills
+              from time to time based on societal needs...
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-5 offset-md-1">
+          <div class="info_news">
+            <h5>
+              FOR ANY QUERY, PLEASE WRITE TO US
+            </h5>
+            <div class="info_contact">
+              <a href="">
+                Location
+              </a>
+              <a href="">
+                hyacinthemiamo5@gmail.com
+              </a>
+              <a href="">
+                Call : +237 676414904
+              </a>
+            </div>
+            <form action="">
+              <input type="text" placeholder="Enter Your email" />
+              <button>
+                Subscribe
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end info section -->
+
+  <!-- footer section -->
+  <footer class="container-fluid footer_section">
+    <p>
+      &copy; 21st century Afro-Revolution On
+      <a href="https://html.design/">Free Orientation</a>
+    </p>
+  
+  </footer>
+
+   
+  <footer class="container-fluid footer_section">
+  
+      <p>
+        Distributed By 
+        <a href="https://themewagon.com/">MiaTechTok</a>
+      </p>
+  
+  </footer>
+ 
+  <!-- footer section -->
+
+  <script type="text/javascript" src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script>
+
+</body>
+
+</html>
